@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Vue JS Intro</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
+  </head>
+  <body>
+
+    <div id="app">
+      <input type="text" v-model="message"></br>
+      {{  message }}
+
+      <ul>
+        <li v-for="drink_item in drink_items">{{drink_item}}</li>
+      </ul>
+
+      <ol>
+        <li v-for="food_item in food_items">{{food_item}}</li>
+      </ol>
+
+      <button v-on:click="buttonClick">Click</button>
+
+
+    </div>
+
+
+
+    <script>
+
+      new Vue({
+        el: '#app',
+        data:{
+          'message': 'Welcome to The Gambia',
+          'drink_items': ['wonjor', 'ginger', 'bui', 'ditta', 'wonjor-bui'],
+          'food_items': ['benachin-white', 'supakanja', 'plasas', 'domada', 'yaasa', 'benachin-red', 'mbahal']
+        },
+        methods:{
+          buttonClick: function(){
+            alert("You have just clicked me!")
+          }
+        }
+      });
+
+    </script>
+
+  </body>
+</html>
