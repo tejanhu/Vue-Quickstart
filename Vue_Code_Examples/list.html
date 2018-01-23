@@ -3,13 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>Vue JS Intro</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
+    <script src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script>
   </head>
   <body>
 
     <div id="app">
       <input type="text" v-model="message"></br>
-      {{  message }}
+      <h1>{{  message }}</h1>
+
 
       <ul>
         <li v-for="drink_item in drink_items">{{drink_item}}</li>
@@ -24,25 +25,24 @@
 
     </div>
 
-
-
-    <script>
-
-      new Vue({
-        el: '#app',
-        data:{
-          'message': 'Welcome to The Gambia',
-          'drink_items': ['wonjor', 'ginger', 'bui', 'ditta', 'wonjor-bui'],
-          'food_items': ['benachin-white', 'supakanja', 'plasas', 'domada', 'yaasa', 'benachin-red', 'mbahal']
-        },
-        methods:{
-          buttonClick: function(){
-            alert("You have just clicked me!")
-          }
-        }
-      });
-
-    </script>
-
   </body>
+  <script src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script>
+
+  <script>
+
+    new Vue({
+      el: '#app',
+      data:{
+        'message': 'Welcome to The Gambia',
+        'drink_items': ['wonjor', 'ginger', 'bui', 'ditta', 'wonjor-bui'],
+        'food_items': ['benachin-white', 'supakanja', 'plasas', 'domada', 'yaasa', 'benachin-red', 'mbahal']
+      },
+      methods:{
+        buttonClick: function(){
+          alert("You have just clicked me!")
+        }
+      }
+    });
+
+  </script>
 </html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+      <head>
+        <meta charset="utf-8">
+        <title>Vue.js| Directives</title>
+
+      </head>
+
+      <script src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script>
+      <body>
+        <div id="app">
+          <h1>{{  message }}</h1>
+          <!-- <h1 v-else>You have NOT viewed this page</h1> -->
+        </div>
+      </body>
+
+
+
+
+      <script>
+        var app= new Vue({
+          el: '#app',
+          data:{
+            message: 'Hello Vue World',
+            intro: "Welcome to the Tutorial <small>It is all about Vue.js</small>",
+            viewed: true,
+            viewed2: true
+          }
+        })
+      </script>
+</html>
