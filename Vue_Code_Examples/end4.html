@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+      <head>
+        <meta charset="utf-8">
+        <title>Vue.js| Directives</title>
+        <style>
+          [v-cloak]{
+            background-color: red;
+          }
+        </style>
+      </head>
+
+      <script src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script>
+      <body>
+        <div id="app">
+
+          <h1 v-bind:title="title">{{message}}</h1>
+          <img :src="url" :alt="title" :title="title"><br/>
+          <img v-bind:src="url_2" v-bind:alt="title_2" v-bind:title="title_2">
+
+        </div>
+      </body>
+
+
+
+
+      <script>
+        var app= new Vue({
+          el: '#app',
+          data:{
+            message: "Hi World",
+            title: "You loaded the page on "+ new Date(),
+            url: "https://avatars3.githubusercontent.com/u/10237400?s=400&v=4",
+            url_2: "https://uk.linkedin.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAlBAAAAJDUwOGM0ZTE1LWExOTEtNGU3Zi04NjViLThkOTc3MzVhMzUwMA.jpg",
+            title_2: "tejanhu"
+
+          }
+        })
+      </script>
+</html>
