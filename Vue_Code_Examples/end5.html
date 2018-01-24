@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+      <head>
+        <meta charset="utf-8">
+        <title>Vue.js| Directives</title>
+      </head>
+
+      <script src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script>
+      <body>
+        <div id="app">
+          <h1>{{ message }}</h1>
+          <ul>
+            <li style="list-style-type:none;" v-for="todo in todos">{{todo.id}}) {{todo.text}}</li>
+          </ul>
+
+        </div>
+      </body>
+
+
+
+
+      <script>
+        var app= new Vue({
+          el: '#app',
+          data:{
+            message: "Hi World",
+            todos:[
+              { text: 'Learn HTML', id:  1},
+              { text: 'Learn CSS', id:  2},
+              { text: 'Learn JavaScript', id:  3},
+              { text: 'Learn jQuery', id:  4},
+              { text: 'Learn Vue', id:  5},
+              { text: 'Learn PHP', id:  6},
+              { text: 'Learn Laravel Framework', id:  7}
+            ]
+          }
+        })
+      </script>
+</html>
