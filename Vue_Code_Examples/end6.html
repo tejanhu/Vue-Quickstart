@@ -8,18 +8,21 @@
       <script src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script>
       <body>
         <div id="app">
-          {{ message }}
+            <!-- Model Directives to View : M-V -->
+            <h1>{{ message }}</h1>
+            <!-- View ties to Model : V-M -->
+            <input type="text" v-model="message"/>
         </div>
       </body>
 
 
 
-
+      <!-- Model -->
       <script>
         var app= new Vue({
           el: '#app',
           data:{
-            message: "Hello World"
+            message: "Hello Vue World"
           }
         })
       </script>

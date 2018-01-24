@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+      <head>
+        <meta charset="utf-8">
+        <title>Vue.js| Directives</title>
+      </head>
+
+      <script src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script>
+      <body>
+        <div id="app">
+
+            <h1>Count: {{count}}</h1>
+            <!-- <button v-on:click="countUp">Count Up</button>
+            <button v-on:click="countDown">Count Down</button> -->
+            <button @click="countUp">Count Up</button>
+            <button @click="countDown">Count Down</button><br/>
+            <p>Visit:<a :href="url">{{cleanUrl}}</a></p>
+            <input type="text" v-model="url"/>
+            <button @click="humaniseUrl">Humanise Me!</button>
+        </div>
+      </body>
+
+
+
+      <!-- Model -->
+      <script>
+        var app= new Vue({
+          el: '#app',
+          data:{
+            message: "Hello Vue World",
+            url: "",
+            cleanUrl: "",
+            count: 0
+          },
+          methods:{
+            humaniseUrl: function(){
+              this.cleanUrl = this.url.replace(/^https?:\/\//,  '').replace(/\/$/, '')
+            },
+            countUp: function(){
+              this.count +=1
+            },
+            countDown: function(){
+              this.count -=1
+            }
+          }
+        })
+      </script>
+</html>
