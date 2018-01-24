@@ -10,7 +10,8 @@
         <div id="app">
           <h1>{{ message }}</h1>
           <ul>
-            <li style="list-style-type:none;" v-for="todo in todos">{{todo.id}}) {{todo.text}}</li>
+            <li style="list-style-type:none;" v-for="todo in todos">{{todo.id}}) {{todo.text}}</li><br/>
+            <li v-for="count in count">Learn more Programming Languages and Frameworks!</li>
           </ul>
 
         </div>
@@ -23,7 +24,7 @@
         var app= new Vue({
           el: '#app',
           data:{
-            message: "Hi World",
+            message: "Coding Inspiration",
             todos:[
               { text: 'Learn HTML', id:  1},
               { text: 'Learn CSS', id:  2},
@@ -37,7 +38,8 @@
               { text: 'Learn Ruby', id:  10},
               { text: 'Learn Python', id:  11},
               { text: 'Learn Django Framework', id:  12}
-            ]
+            ],
+            count: 100
           }
         })
       </script>
