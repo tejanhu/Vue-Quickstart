@@ -80,7 +80,7 @@
         app.startingBorough = "Searching..."
         axios.get('https://api.postcodes.io/postcodes/' + app.startingPCode)
               .then(function (response){
-                app.startingBorough = response.data.result.admin_district + ', '
+                app.startingBorough = response.data.result.admin_district
               })
               .catch(function (error){
                 app.startingBorough = "Invalid Postcode"
@@ -92,7 +92,7 @@
         app.endingBorough = "Searching..."
         axios.get('https://api.postcodes.io/postcodes/' + app.endingPCode)
               .then(function(response){
-                app.endingBorough = response.data.result.admin_district + ', '
+                app.endingBorough = response.data.result.admin_district
               }).catch(function(error){
                 app.endingBorough = "Invalid Postcode"
                 console.log(error)
