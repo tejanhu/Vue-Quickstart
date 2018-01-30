@@ -7,8 +7,7 @@
     <title>Vue.js Tutorial | API Example</title>
 
     <!-- Bootstrap CSS-->
-    <link rel="stylesheet" src="/bootstrap/css/bootstrap.min.css"
-    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -45,10 +44,9 @@
 
   </body>
 
-  <script src="vue.js"></script>
-  <script src="vue@2.5.13/dist/vue.js"></script>
-  <script src="axios/dist/axios.min.js"></script>
-  <script src="lodash/lodash.min.js"></script>
+  <script src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://unpkg.com/lodash@4.17.4/lodash.min.js"></script>
 
   <script>
     var app = new Vue({
@@ -79,7 +77,7 @@
         lookupStartingPCode: _.debounce(function() {
         var app = this
         app.startingBorough = "Searching..."
-        axios.get('http://api.postcodes.io/postcodes/' + app.startingPCode)
+        axios.get('https://api.postcodes.io/postcodes/' + app.startingPCode)
               .then(function (response){
                 app.startingBorough = response.data.result.admin_district
               })
@@ -91,7 +89,7 @@
         lookupEndingPCode: _.debounce(function() {
         var app = this
         app.endingBorough = "Searching..."
-        axios.get('http://api.postcodes.io/postcodes/' + app.endingPCode)
+        axios.get('https://api.postcodes.io/postcodes/' + app.endingPCode)
               .then(function(response){
                 app.endingBorough = response.data.result.admin_district
               }).catch(function(error){
